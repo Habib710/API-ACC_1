@@ -11,6 +11,7 @@ app.use(express.json())
 
 
 app.use('/user', routers)
+app.use('/user/:id', routers)
 
 
 
