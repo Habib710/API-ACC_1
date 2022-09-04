@@ -6,7 +6,7 @@ const users = require('../Controller/controller')
 router.route('/all').get(users.getAllUsers)
 router.route('/random').get(users.getRandomUsers)
 router.route('/').post(users.postUser)
-router.route('/:id').patch(users.updateUser).delete(users.deleteUser)
+router.route('/:id').get(users.getOneUser).patch(users.updateUser).delete(users.deleteUser)
 
 
 

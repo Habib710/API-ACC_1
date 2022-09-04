@@ -21,6 +21,24 @@ module.exports.getRandomUsers=(req,res)=>{
     res.send(random);
 
 };
+// get user by id ..................
+module.exports.getOneUser=(req,res)=>{
+
+    const {id}=req.params;
+
+    if(0<id && id<9){
+
+    const newdata= data.find(user=>user.Id == Number(id));
+    
+    res.send(newdata);
+}
+    else{
+        res.send("Id Is Not Valid")
+    }
+    console.log(id);
+}
+
+
 // post user........................
 
 module.exports.postUser=(req,res)=>{
